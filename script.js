@@ -5,8 +5,9 @@ const buttonsContainer = document.querySelector(".buttons");
 const yesButton = document.querySelector(".btn--yes");
 const noButton = document.querySelector(".btn--no");
 const catImg = document.querySelector(".cat-img");
+const mentok = document.querySelector(".footer");
 
-const MAX_IMAGES = 10;
+const MAX_IMAGES = 12;
 
 let play = true;
 let noCount = 0;
@@ -22,14 +23,22 @@ noButton.addEventListener("click", function () {
     updateNoButtonText();
     if (noCount === MAX_IMAGES) {
       play = false;
+      hideBtn();
     }
   }
 });
 
-function handleYesClick() {
+function delay(ms) {
+  return new Promise(resolve => setTimeout(resolve, ms));
+}
+
+async function handleYesClick() {
   titleElement.innerHTML = "Yayyy!! :3";
   buttonsContainer.classList.add("hidden");
+  mentok.style.fontSize = `0px`;
   changeImage("yes");
+  await delay(5000);
+  window.location.href = "lagu.html";
 }
 
 function resizeYesButton() {
@@ -38,6 +47,11 @@ function resizeYesButton() {
   const newFontSize = fontSize * 1.6;
 
   yesButton.style.fontSize = `${newFontSize}px`;
+}
+
+function hideBtn() {
+  noButton.style.transform = 'scale(0)';
+  mentok.style.fontSize = `20px`;
 }
 
 function generateMessage(noCount) {
