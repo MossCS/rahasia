@@ -56,13 +56,18 @@ function hideBtn() {
 
 function generateMessage(noCount) {
   const messages = [
-    "plissss",
+    "pelissss",
     "gitu kamuu yahhh",
     "jahatt bangetttt",
-    "gamau tauuu",
-    "WKWKWKWKWK",
+    "nyenyenye",
+    "🥺🥺🥺🥺",
     "KWKWKW",
     "NGAPAINNN WKWKWK",
+    "hayoo tambah besar WKWKAK",
+    "😋😋😝😝",
+    "benerann nichh???",
+    "yakinnn???",
+    "okehh fain",
   ];
 
   const messageIndex = Math.min(noCount, messages.length - 1);
