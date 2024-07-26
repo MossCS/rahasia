@@ -45,11 +45,6 @@
 		.wrapper {
 			position: fixed;
 		}
-        
-        .mark {
-            
-            
-        }
 
 		.box div {
 			position: fixed;
@@ -135,8 +130,7 @@
 </head>
 
 <body>
-    
-	<audio autoplay src="sempurna.mp3"></audio>
+	<audio id="audiop" autoplay src="sempurna.mp3"></audio>
 	<div id="container"></div>
 	<a href="" class="hidden"></a>
 	<div class="wrapper">
@@ -247,6 +241,11 @@
 				}
 			});
 		});
+		var audio = document.getElementById("audiop");
+
+        audio.addEventListener("ended", function() {
+            window.location.href = "flower.html"; 
+        });
 
 	</script>
 </body>
